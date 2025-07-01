@@ -1,3 +1,6 @@
+/* Even or Odd Number */
+
+
 function checkEvenOROddNumber(num){
     if(num % 2 == 0){
         console.log(num + " is a even number");

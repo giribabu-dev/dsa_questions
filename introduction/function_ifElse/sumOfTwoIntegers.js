@@ -1,3 +1,6 @@
+/* Sum of two integers */
+
+
 function sumOfTwoIntegers(a, b){
     console.log(a + b);
 };

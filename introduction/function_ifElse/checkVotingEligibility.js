@@ -1,3 +1,6 @@
+/* Check Voting Eligibility */
+
+
 function checkVotingEligibility(num){
     if(num > 18){
         console.log("Eligible for voting");
