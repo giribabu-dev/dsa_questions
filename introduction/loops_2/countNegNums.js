@@ -3,16 +3,17 @@
 
 const arr = [5, -15, -7, 1, 20, -25];
 
-let count = 0;
-
 function countNegativeNumbers(arr){
-    arr.forEach((ele, index)=> {
-        if(ele < 0){
-            count += 1;
-        }
-    });
+    let count = 0;
 
-    console.log(count);
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] < 0){
+            count++;
+        }
+    }
+
+    return count
 };
 
-countNegativeNumbers(arr);
+let result = countNegativeNumbers(arr);
+console.log(result);

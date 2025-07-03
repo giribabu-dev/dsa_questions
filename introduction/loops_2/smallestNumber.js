@@ -10,18 +10,17 @@
 
 const arr = [10, 43, 7, 2, 20, 25];
 
-let small = arr[0];
-
 function findSmallestNumber(arr){
+    let smallest = arr[0];
+    
     for(let i = 0; i < arr.length; i++){
-        if(small > arr[i]){
-            small = arr[i]
+        if(arr[i] < smallest){
+            smallest = arr[i];
         }
     }
 
-    return small;
+    return smallest;
 };
 
-let smallestNum = findSmallestNumber(arr);
-
-console.log(smallestNum)
+let result = findSmallestNumber(arr);
+console.log(result);

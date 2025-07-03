@@ -10,18 +10,17 @@
 
 const arr = [10, 44, 7, 1, 20, 25];
 
-let large = arr[0];
-
 function findLargestNumber(arr){
+    let largest = -Infinity;
+
     for(let i = 0; i < arr.length; i++){
-        if(large < arr[i]){
-            large = arr[i];
+        if(arr[i] > largest){
+            largest = arr[i];
         }
     }
 
-    return large;
+    return largest;
 };
 
-let largestNum = findLargestNumber(arr);
-
-console.log(largestNum);
+let result = findLargestNumber(arr);
+console.log(result);
