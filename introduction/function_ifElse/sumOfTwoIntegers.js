@@ -1,8 +1,8 @@
 /* Sum of two integers */
 
-
 function sumOfTwoIntegers(a, b){
-    console.log(a + b);
+    return a + b;
 };
 
-sumOfTwoIntegers(1, 8);
+let result = sumOfTwoIntegers(1, 8);
+console.log(result);

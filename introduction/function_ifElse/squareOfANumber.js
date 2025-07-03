@@ -2,7 +2,8 @@
 
 
 function squareOfANumber(num){
-    console.log(num * num);
+    return num * num;
 };
 
-squareOfANumber(2025);
+let result = squareOfANumber(2025);
+console.log(result);
