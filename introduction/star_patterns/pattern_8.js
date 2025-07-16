@@ -15,6 +15,7 @@ for (let i = 0; i < n; i++) {
     let toggle = "1";
 
     for (let j = 0; j < (i + 1); j++) {
+
         row = row + toggle;
 
         if (toggle == "1") {
@@ -27,3 +28,4 @@ for (let i = 0; i < n; i++) {
 
     console.log(row);
 };
+
