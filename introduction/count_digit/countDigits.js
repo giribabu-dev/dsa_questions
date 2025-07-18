@@ -7,6 +7,7 @@ function countDigits(num) {
     if (num == 0) return 1;
 
     num = Math.abs(num);
+
     let count = 0;
 
     while (num > 0) {
@@ -18,4 +19,6 @@ function countDigits(num) {
 };
 
 const result = countDigits(input);
+
 console.log(result);
+
