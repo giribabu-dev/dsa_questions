@@ -1,22 +1,20 @@
-/* Check if a string is a Palindrome or not */
-
-/* madam, racecar, 12321 */
-
-let input = "Giribabu";
+/* 
+    Palindrome
+    Check if a string is a Palindrome.
+*/
 
 function checkPalindrome(str) {
-    let output = "";
+
+    const original = str;
+    let reversed = "";
 
     for (let i = str.length - 1; i >= 0; i--) {
-        output = output + str.charAt(i);
+        reversed = reversed + str.charAt(i);
     };
 
-    if (input.toLowerCase() == output.toLowerCase()) {
-        console.log(input + " is a Palindrome string");
-    }
-    else {
-        console.log(input + " is not a Palindrome string");
-    }
+    return original === reversed;
 };
 
-checkPalindrome(input);
+console.log(checkPalindrome("madam"));
+console.log(checkPalindrome("javascript"));
+console.log(checkPalindrome("racecar"));

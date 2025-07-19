@@ -1,22 +1,22 @@
-/* Check if a Number is a Palindrome or not */
-
-let input = 2025;
+/* 
+    Palindrome
+    Check if a number is a Palindrome.
+*/
 
 function checkPalindrome(num) {
 
-    let output = "";
+    const original = num;
+    let reversed = 0;
 
-    for (let i = 0; num > 0; i++) {
-        output = output + (num % 10);
+    while(num > 0){
+        let digit = num % 10;
+        reversed = reversed * 10 + digit;
         num = Math.floor(num / 10);
-    };
+    }
 
-    if (input == output) {
-        console.log(input + " is a Palindrome number");
-    }
-    else {
-        console.log(input + " is not a Palindrome number");
-    }
+    return original === reversed;
 };
 
-checkPalindrome(input);
+console.log(checkPalindrome(12321));
+console.log(checkPalindrome(2025));
+console.log(checkPalindrome(121));
