@@ -1,6 +1,7 @@
-/* Reverse the Digits of an Integer */
-
-let input = 1126;
+/* 
+    Reverse Integer
+    Reverse the Digits of an Integer 
+*/
 
 function reverseDigits(num) {
     let output = "";
@@ -10,7 +11,8 @@ function reverseDigits(num) {
         num = Math.floor(num / 10);
     };
 
-    console.log(output);
+    return output;
 };
 
-reverseDigits(input);
+console.log(reverseDigits(1126));
+console.log(reverseDigits(2025));
