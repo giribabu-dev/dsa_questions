@@ -1,8 +1,9 @@
 /* Sum of two integers */
 
-function sumOfTwoIntegers(a, b){
+function sumOfTwoIntegers(a, b) {
     return a + b;
 };
 
-let result = sumOfTwoIntegers(1, 8);
-console.log(result);
+console.log(sumOfTwoIntegers(1, 8));
+console.log(sumOfTwoIntegers(11, 5));
+console.log(sumOfTwoIntegers(20, 25));
