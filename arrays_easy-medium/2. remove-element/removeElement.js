@@ -3,9 +3,8 @@
     Q: Remove specific elements from an array
 */
 
-const input = [10, 32, 7, 17, 20, 25];
-
 function removeElement(arr, ele) {
+
     let output = [];
 
     for (let i = 0; i < arr.length; i++) {
@@ -14,7 +13,8 @@ function removeElement(arr, ele) {
         }
     };
 
-    console.log(output);
+    return output;
 };
 
-removeElement(input, 20);
+console.log(removeElement([10, 32, 7, 17, 20, 25], 20));
+console.log(removeElement([3, 16, 7, 25, 20, 25], 16));

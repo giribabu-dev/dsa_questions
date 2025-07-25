@@ -3,12 +3,9 @@
     Que: Remove specific element from an array
 */
 
-const input = [10, 37, 7, 17, 20, 25];
-
 function removeElement(arr, ele){
-    let output = arr.filter(item => item != ele);
-
-    console.log(output);
+    return arr.filter(item => item != ele);
 };
 
-removeElement(input, 37);
+console.log(removeElement([10, 37, 7, 17, 20], 37));
+console.log(removeElement([1, 2, 3, 4, 5], 5));
