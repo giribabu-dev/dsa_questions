@@ -10,13 +10,10 @@
         joins it back to 'olleh'
 */
 
-const input = "javascript playground";
-
 function reverseString(str){
 
-    let reverseStr = str.split("").reverse().join("");
-
-    console.log(reverseStr);
+    return str.split("").reverse().join("");
 };
 
-reverseString(input);
+console.log(reverseString("javascript playground"));
+console.log(reverseString("nodejs and expressjs"));
