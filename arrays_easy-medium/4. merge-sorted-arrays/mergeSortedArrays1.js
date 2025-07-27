@@ -3,9 +3,6 @@
     Question: Merge two sorted arrays into one sorted array
 */
 
-const input1 = [1, 3, 5];
-const input2 = [2, 4, 6];
-
 function mergeSortedArrays(arr1, arr2) {
     let output = [];
 
@@ -27,7 +24,8 @@ function mergeSortedArrays(arr1, arr2) {
         }
     };
 
-    console.log(output);
+    return output;
 };
 
-mergeSortedArrays(input1, input2);
+console.log(mergeSortedArrays([1, 3, 5], [2, 4, 6]));
+console.log(mergeSortedArrays([1, 2, 8], [3, 4, 10]));
