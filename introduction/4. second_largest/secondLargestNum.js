@@ -1,6 +1,7 @@
-/* Find the Second Largest Number in an Array */
-
-let arr = [12, 39, 7, 3, 20, 25];
+/* 
+    Second Largest
+    Que: Find the second largest number in an array
+*/
 
 function secondLargestNum(arr){
 
@@ -8,21 +9,20 @@ function secondLargestNum(arr){
         return "Array length should be greater than 2"
     }
 
-    let firstLargest = -Infinity;
-    let secondLargest = -Infinity;
+    let large = -Infinity;
+    let secondLarge = -Infinity;
 
     for(let i = 0; i < arr.length; i++){
-        if(arr[i] > firstLargest){
-            secondLargest = firstLargest;
-            firstLargest = arr[i];
+        if(arr[i] > large){
+            secondLarge = large;
+            large = arr[i];
         }
-        else if (arr[i] > secondLargest && arr[i] != firstLargest){
-            secondLargest = arr[i];
+        else if (arr[i] > secondLarge && arr[i] != large){
+            secondLarge = arr[i];
         }
     }
 
-    return secondLargest;
+    return secondLarge;
 };
 
-let result = secondLargestNum(arr);
-console.log(result);
+console.log(secondLargestNum([12, 39, 7, 3, 20, 25]));
