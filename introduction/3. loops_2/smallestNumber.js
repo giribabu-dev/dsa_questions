@@ -7,15 +7,12 @@
     4. If an element is smaller, update the minimum
 */
 
-
-const arr = [10, 43, 7, 2, 20, 25];
-
-function findSmallestNumber(arr){
+function findSmallestNumber(arr) {
 
     let smallest = arr[0];
-    
-    for(let i = 0; i < arr.length; i++){
-        if(arr[i] < smallest){
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < smallest) {
             smallest = arr[i];
         }
     };
@@ -23,5 +20,4 @@ function findSmallestNumber(arr){
     return smallest;
 };
 
-let result = findSmallestNumber(arr);
-console.log(result);
+console.log(findSmallestNumber([10, 43, 7, 2, 20, 25]));

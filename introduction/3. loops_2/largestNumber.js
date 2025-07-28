@@ -7,14 +7,12 @@
     4. If an element is larger, update the large
 */
 
+function findLargestNumber(arr) {
 
-const arr = [10, 44, 7, 1, 20, 25];
-
-function findLargestNumber(arr){
     let largest = -Infinity;
 
-    for(let i = 0; i < arr.length; i++){
-        if(arr[i] > largest){
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > largest) {
             largest = arr[i];
         }
     }
@@ -22,5 +20,4 @@ function findLargestNumber(arr){
     return largest;
 };
 
-let result = findLargestNumber(arr);
-console.log(result);
+console.log(findLargestNumber([10, 44, 7, 1, 20, 25]));
