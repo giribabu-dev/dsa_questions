@@ -4,20 +4,18 @@
 */
 
 function findMaxStreak(arr) {
-    
     let maxStreak = 0;
     let currentStreak = 0;
 
-    for(let i = 0; i < arr.length; i++){
-        if(arr[i] === 1){
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === 1) {
             currentStreak++;
             maxStreak = Math.max(maxStreak, currentStreak);
         }
-        else{
+        else {
             currentStreak = 0;
         }
     }
-
     return maxStreak;
 };
 
