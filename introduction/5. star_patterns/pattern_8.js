@@ -18,12 +18,7 @@ for (let i = 0; i < n; i++) {
 
         row = row + toggle;
 
-        if (toggle == "1") {
-            toggle = "0";
-        }
-        else {
-            toggle = "1";
-        }
+       toggle == '1' ? toggle = '0' : toggle = '1';
     };
 
     console.log(row);
