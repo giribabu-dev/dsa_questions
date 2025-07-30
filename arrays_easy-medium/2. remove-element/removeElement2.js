@@ -1,11 +1,18 @@
 /*
     Remove Element
-    Que: Remove specific element from an array
+    Que: Remove specific elements from an array
 */
 
-function removeElement(arr, ele){
-    return arr.filter(item => item != ele);
-};
+function removeElement(arr, num){
+    let result = []
 
-console.log(removeElement([10, 37, 7, 17, 20], 37));
-console.log(removeElement([1, 2, 3, 4, 5], 5));
+    arr.forEach(ele => {
+        if(ele !== num){
+            result.push(ele)
+        }
+    })
+    return result
+}
+
+console.log(removeElement([11, 29, 7, 20, 25], 29))
+console.log(removeElement([18, 28, 30, 7, 1], 30))
