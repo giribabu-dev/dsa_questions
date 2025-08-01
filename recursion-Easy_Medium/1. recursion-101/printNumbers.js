@@ -3,11 +3,10 @@
     Que: Print numbers from n to 1 using recursion
 */
 
-function printNumbers(num) {
-
-    if (num > 0) {
-        console.log(num)
-        printNumbers(num - 1)
+function printNumbers(n) {
+    if (n > 0) {
+        console.log(n)
+        printNumbers(n - 1)
     }
 }
 
