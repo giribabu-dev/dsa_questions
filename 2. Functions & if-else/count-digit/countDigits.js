@@ -1,20 +1,16 @@
-/* 
-    Count Digits
-    Que: Count the number of digits in an integer 
-*/
+function countDigits(n) {
+    if (n == 0) return 1;
 
-function countDigits(num) {
-    if (num === 0) return 1;
+    n = Math.abs(n)
 
-    num = Math.abs(num);
-
-    let count = 0;
-    while (num > 0) {
-        num = Math.floor(num / 10);
+    let count = 0
+    while (n > 0) {
+        n = Math.floor(n / 10);
         count++;
-    };
+    }
     return count;
-};
+}
 
-console.log(countDigits(12197292025));
-console.log(countDigits(8106238719));
+console.log(countDigits(259))
+console.log(countDigits(1035))
+console.log(countDigits(0))
