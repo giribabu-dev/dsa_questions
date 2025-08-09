@@ -1,23 +1,14 @@
-/* Q3. Find Largest Number in an Array */
+function largestNumber(arr){
+    let largest = -Infinity
 
-/* 
-    1. Initialize the variable with the first element of the array as the largest
-    2. Loop through the array
-    3. Compare the each element with the current element
-    4. If an element is larger, update the large
-*/
-
-function findLargestNumber(arr) {
-
-    let largest = -Infinity;
-
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] > largest) {
-            largest = arr[i];
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] > largest){
+            largest = arr[i]
         }
     }
-
     return largest;
-};
+}
 
-console.log(findLargestNumber([10, 44, 7, 1, 20, 25]));
+let arr = [2, -6, 4, 8, 1, -9]
+let result = largestNumber(arr)
+console.log("Largest:", result)
