@@ -1,23 +1,14 @@
-/* Q2. Find Smallest Number in an Array */
-
-/*
-    1. Initialize a variable with the first element of the array as the minimum
-    2. Loop through the array
-    3. Compare each element with the currect element
-    4. If an element is smaller, update the minimum
-*/
-
-function findSmallestNumber(arr) {
-
-    let smallest = arr[0];
+function smallestNumber(arr) {
+    let smallest = Infinity;
 
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] < smallest) {
-            smallest = arr[i];
+            smallest = arr[i]
         }
-    };
-
+    }
     return smallest;
-};
+}
 
-console.log(findSmallestNumber([10, 43, 7, 2, 20, 25]));
+const arr = [2, -6, 4, 8, 1, -9]
+let result = smallestNumber(arr)
+console.log("Smallest:", result)
