@@ -1,16 +1,14 @@
-/* Count Negative Numbers in an Array */
-
 function countNegativeNumbers(arr) {
+    let counter = 0
 
-    let count = 0;
-
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] < 0) {
-            count++;
+    for (let ele of arr) {
+        if (ele < 0) {
+            counter++
         }
     }
+    return counter
+}
 
-    return count
-};
-
-console.log(countNegativeNumbers([5, -15, -7, 1, 20, -25]));
+let arr = [2, -6, 4, 8, 1, -9]
+let result = countNegativeNumbers(arr)
+console.log("Result:", result)
