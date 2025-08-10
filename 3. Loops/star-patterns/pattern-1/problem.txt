@@ -1,0 +1,20 @@
+Pattern 1: Print nxn Star Square
+
+Print a square pattern of stars (*) of size n x n.
+
+
+Output:
+* * * *
+* * * *
+* * * *
+* * * *
+
+Approach:
+1. Outer Loop (Rows): Run from i=0 to i=n-1
+2. Inner Loop (Columns): For each row, loop from j=0 to j=n-1
+3. Build Row String: Append * in each inner loop iteration.
+4. Print Row: After the inner loop, print the complete row string.
+
+Time & Space Complexity:
+1. Time Complexity: O(n^2)
+2. Space Complexity: O(n) (temporary row string)
