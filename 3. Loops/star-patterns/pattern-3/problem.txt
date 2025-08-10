@@ -1,0 +1,18 @@
+Pattern 3: Print a Right-Angled Number Triangle
+
+Write a program that prints a right-angled triangle of numbers of height n.
+
+Output:
+1
+1 2
+1 2 3
+1 2 3 4
+
+Approach:
+1. Outer Loop (Rows): Run a loop from i=0 to i<n. Each iteration represents a new row.
+2. Inner Loop (Numbers): Run an inner loop from j=0 to j<=i and append j+1 to the row.
+3. Build and Print: Construct a string for the row and print it after the inner loop ends.
+
+Time & Space Complexity:
+1. Time Complexity: O(n^2) Each row can have up to n numbers.
+2. Space Complexity: O(n) Temporary string to build each row.
