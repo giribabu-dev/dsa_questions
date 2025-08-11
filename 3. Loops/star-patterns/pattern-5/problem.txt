@@ -1,0 +1,18 @@
+Pattern 5: Print a Reverse Right-Angled Triangle of Increasing Numbers
+
+Write a program that prints a reverse right-angled triangle where each row starts from 1 and the number of elements decreases with each row.
+
+Output:
+1 2 3 4
+1 2 3
+1 2
+1
+
+Approach:
+1. Outer loop (Rows): Loop i from 0 to n-1. Each iteration represents a row.
+2. Inner loop (Print Numbers): For each row, loop j from 0 to n-i-1 and append j+1 to a row string.
+3. Print Row: After the inner loop, print the row string.
+
+Time & Space Complexity:
+1. Time Complexity: O(n^2)
+2. Space Complexity: O(n) for the temporary row string.
