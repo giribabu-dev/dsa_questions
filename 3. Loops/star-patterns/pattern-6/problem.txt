@@ -1,0 +1,19 @@
+Pattern 6: Print a Right-Aligned Right-Angled Triangle of Stars
+
+Write a program that prints a right-aligned triangle of stars increasing row by row, with leading spaces for alignment.
+
+Output:
+      *
+    * *
+  * * *
+* * * *
+
+Approach:
+1. Outer loop (Rows): Loop i=0 from 0 to n-1. Each iteration is a new row.
+2. Inner loop 1 (Spaces): For each row, add n-i-1 spaces before the stars to right-align the triangle.
+3. Inner loop 2 (Stars): Add i+1 stars after the spaces.
+4. Print Row: Combine the spaces and stars, then print the row.
+
+Time & Space Complexity:
+1. Time Complexity: O(n^2)
+2. Space Complexity: O(n) for the row string.
