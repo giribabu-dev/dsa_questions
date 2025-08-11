@@ -1,0 +1,20 @@
+Pattern 9: Print an Inverted Right-Angled Triangle of Stars
+
+Write a program that print an inverted right-angled triangle of stars, starting with n stars in the first row and decreasing by one star each row 
+until only one star remains.
+
+Output:
+* * * *
+* * *
+* *
+*
+
+Approach:
+1. Outer loop (Rows): Loop i from 0 to n-1. Each iteration represents a new row
+2. Inner loop (Stars): For each row, print n-i stars
+3. Print Row: Combine the stars into a string and print it
+
+Time & Space Complexity:
+1. Time Complexity: O(n^2) - because for each row, we may print up to n stars and the total number of stars prints forms a triangular
+    number proportional to n^2
+2. Space Complexity: O(n) - for storing the row string before printing
