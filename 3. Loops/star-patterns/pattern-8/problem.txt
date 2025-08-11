@@ -1,0 +1,25 @@
+Pattern 8: Right-Angled Triangle of Alternating 1s and 0s (Global Toggle)
+
+Write a program to print a triangle of alternating 1s and 0s, but the toggle continues globally across rows.
+
+Output:
+1
+0 1
+0 1 0
+1 0 1 0
+
+Approach:
+1. Global Toggle Variable: Declare toggle=1 before the outer loop
+2. Outer Loop: Loop i from 0 to n-1
+3. Inner Loop: Loop j from 0 to i
+    On each iteration:
+    a. Append: toggle to the row string
+    b. Flip: toggle 1 -> 0 and 0 -> 1
+4. Print the Row: after the inner loop
+
+Key Difference:
+1. In the previous pattern, toggle=1 was reset each row. Here, the toggle continues globally across the entire pattern
+
+Time & Space Complexity:
+1. Time Complexity: O(n^2)
+2. Space Complexity: O(n) per row
