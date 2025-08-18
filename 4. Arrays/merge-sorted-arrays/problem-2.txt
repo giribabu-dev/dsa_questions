@@ -1,0 +1,25 @@
+Merge Sorted Arrays
+
+
+Approach 2: Two Pointer Method
+************
+1. Instead of sorting at the end, this algorithm merges the arrays in sorted order using two pointers.
+2. Copy the first m elements of nums1 into a temporary array (nums1Copy).
+3. Use two pointers p1 (for nums1Copy) and p2 (for nums2) to compare elements.
+4. At each index i of nums1, place the smaller of the elements from nums1Copy[p1] and nums2[p2].
+5. Repeat until nums1 is fully filled with the merged sorted elements.
+
+
+Time Complexity:
+*****************
+1. Time Complexity = O(m+n)
+Explanation:
+1. Copying the first m elements to nums1Copy takes O(m)
+2. Merging the two sorted arrays takes O(m + n) because each index in nums1 is visited exactly once.
+
+
+Space Complexity:
+******************
+1. Space Complexity = O(m)
+Explanation:
+1. You create a copy of the first m elements of nums1 in nums1Copy, which takes O(m) additional space.
