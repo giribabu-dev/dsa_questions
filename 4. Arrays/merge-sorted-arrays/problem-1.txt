@@ -50,3 +50,19 @@ Approach: Brute Force (Simple Concatenate + Sort)
 *********
 1. Overwrite the trailing zeros in nums1 (from index m onwards) with all elements of nums2.
 2. Sort the whole nums1 array.
+
+
+Dry Run:
+*********
+nums1 = [1, 2, 3, 0, 0, 0]
+nums2 = [2, 5, 6]
+m = 3
+n = 3
+
+i=3;  3 < 6  => true  => nums1[3] = nums2[0]  => [1, 2, 3, 2, 0, 0]
+
+i=4;  4 < 6  => true  => nums1[4] = nums2[1]  => [1, 2, 3, 2, 5, 0]
+
+i=5;  5 < 6  => true  => nums1[5] = nums2[2]  => [1, 2, 3, 2, 5, 6]
+
+[1, 2, 2, 3, 5, 6]
