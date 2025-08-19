@@ -1,5 +1,6 @@
 Find the Second Largest Number is an Array
 
+
 Problem Statement:
 Write a function secondLargest(arr) that returns the second largest distinct number in an array.
 
