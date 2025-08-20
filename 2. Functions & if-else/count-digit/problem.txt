@@ -27,3 +27,25 @@ Approach:
 5. Divide n by 10 using integer division.
 6. Increment count.
 7. Return: The count after the loop finishes.
+
+
+Dry Run:
+********
+n = 259
+count = 0
+
+259 > 0  => true
+n = 25
+count = 1
+
+25 > 0  => true
+n = 2
+count = 2
+
+2 > 0  => true
+n = 0
+count = 3
+
+0 > 0  => false
+
+Final: count = 3
