@@ -1,0 +1,89 @@
+Max Consecutive Ones
+
+
+Problem Statement:
+*******************
+Given a binary array nums, return the maximum number of consecutive 1's in the array.
+
+
+Examples:
+**********
+Example 1:
+
+Input: nums = [1, 1, 0, 1, 1, 1]
+Output: 3
+Explanation:
+1. The first two digits or last three digits are consecutive 1s.
+2. The maximum number of consecutive 1s is 3
+
+Example 2:
+Input: nums = [1, 0, 1, 1, 0, 1]
+Output: 2
+
+
+Constraints:
+*************
+1. 1 <= nums.length <= 10^5
+2. nums[i] is either 0 or 1
+
+
+Optimal Approach: Single Pass
+******************
+1. Initialize two variables:
+2. currentCount → to count current streak of 1s
+3. maxCount → to keep track of the maximum streak seen so far.
+4. Traverse the array:
+5. If nums[i] == 1, increment currentCount
+6. If nums[i] == 0, compare currentCount with maxCount, update maxCount then reset currentCount to 0.
+7. After the loop, return the maximum of maxCount and currentCount (to handle case where array ends in 1s)
+
+
+Time Complexity:
+*****************
+1. Time Complexity = O(n)
+2. One pass to shift non-zero elements.
+
+
+Space Complexity:
+******************
+1. Space Complexity = O(1)
+2. No extra space used beyond a few variables.
+
+
+Dry Run:
+**********
+nums = [1, 1, 0, 1, 1, 1]
+
+currentCount = 0
+maxCount = 0
+
+
+i=0;  0 < 6  => true
+nums[0] == 1  => 1 == 1 => true
+currentCount = 1
+
+i=1;  1 < 6  => true
+nums[1] == 1  => 1 == 1 => true
+currentCount = 2
+
+i=2;  2 < 6  => true
+nums[2] == 1  => 0 == 1  => false
+maxCount = 2
+currentCount = 0
+
+i=3;  3 < 6  => true
+nums[3] == 1  => 1 == 1  => true
+currentCount = 1
+
+i=4;  4 < 6  => true
+nums[4] == 1  => 1 == 1  => true
+currentCount = 2
+
+i=5;  5 < 6  => true
+nums[5] == 1  => 1 == 1  => true
+currentCount = 3
+
+i=6;  6 < 6  => false
+
+
+Final: Final return: max(3, 2) = 3
