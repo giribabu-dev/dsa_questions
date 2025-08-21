@@ -1,0 +1,41 @@
+Missing Number
+
+
+Approach: (Optimal using Sum Formula)
+**********
+The Sum of numbers from 0 to n is given by the formula:
+    total_sum = (n x (n + 1)) / 2
+
+Steps:
+******
+1. Calculate total_sum using formula above
+2. Calculate the sum of all elements in the input array
+3. The missing number is total_sum - sum_of_array
+
+
+Time Complexity:
+*****************
+1. Time Complexity = O(n)
+2. We traverse the array once to compute the sum.
+
+
+Space Complexity:
+******************
+1. Space Complexity = O(1)
+2. Only a few variables are used, no extra space proportional to input size.
+
+
+Dry Run:
+*********
+nums = [3, 0, 1]
+
+n = 3
+
+total_sum = (3 * (3 + 1)) / 2
+          = (3 * 4) / 2
+          = 12 / 2
+          6
+
+sum_of_array = 3 + 0 1  => 4
+
+result = 6 - 4  => 2
