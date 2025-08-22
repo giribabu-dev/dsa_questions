@@ -1,0 +1,47 @@
+Single Number
+
+
+Approach 2: Optimal using XOR
+***********
+1. XOR of two same numbers is 0: a ^ a = 0
+2. XOR of a number with 0 is the number itself: a ^ a = a
+3. So, if all elements occur twice except one, XOR-ing all gives that unique numbers.
+
+
+Time Complexity:
+*****************
+1. Time Complexity = O(n)
+2. Where n is the number of elements in the array.
+
+
+Space Complexity:
+******************
+1. Space Complexity = O(1)
+2. No extra space used.
+
+
+Dry Run:
+********
+nums = [2, 3, 5, 2, 3]
+
+xor = 0
+
+i=0;  0 < 5  => true
+xor = 0 ^ 2 = 2
+
+i=1;  1 < 5  => true
+xor = 2 ^ 3 = 1
+
+i=2;  2 < 5  => true
+xor = 1 ^ 5 = 4
+
+i=3;  3 < 5  => true
+xor = 4 ^ 2 = 6
+
+i=4;  4 < 5  => true
+xor = 6 ^ 3 = 5
+
+i=5;  5 < 5  => false
+
+
+Final: return xor = 5
