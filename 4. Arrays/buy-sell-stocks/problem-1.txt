@@ -1,0 +1,111 @@
+Best Time to Buy and Sell Stocks
+
+
+Problem Statement:
+*******************
+You are given an array prices where prices[i] is the price of a given stock on the ith day.
+You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
+
+Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
+
+
+Examples:
+**********
+Example 1:
+Input: prices = [7, 1, 5, 3, 6, 4]
+Output: 5
+Explanation:
+1. Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6 - 1 = 5
+
+Example 2:
+Input: prices = [7, 6, 4, 3, 1]
+Output: 0
+Explanation:
+1. In this case, no transactions are done and the max profit = 0
+
+
+Constraints:
+*************
+1. 1 <= prices.length <= 10^5
+2. 0 <= prices[i] <= 10^4
+
+
+Approach: Brute Force
+**********
+1. Initialize maxProfit = 0
+2. Use two nested loops
+3. Outer loop picks a day i to buy the stock
+4. Inner loop picks a day j>i to sell the stock
+5. For every pair (i, j), calculate the profit: prices[j] - prices[i]
+6. If this profit is greater than maxProfit, update maxProfit
+
+
+Time Complexity:
+*****************
+1. Time Complexity = O(n^2) two nested loops
+2. For every element i, check all j > i.
+3. Total comparisons = n(n-1)/2 → O(n^2)
+
+
+Space Complexity:
+******************
+1. Space Complexity = O(1)
+2. No extra data structures used.
+3. Only uses a variable maxProfit.
+
+
+Dry Run:
+*********
+prices = [7, 1, 5, 3, 6, 4]
+
+maxProfit = 0
+
+i=0;  0 < 6  => true
+
+j=1;  1 < 6  => true  => (1 - 7) > 0  => false
+j=2;  2 < 6  => true  => (5 - 7) > 0  => false
+j=3;  3 < 6  => true  => (3 - 7) > 0  => false
+j=4;  4 < 6  => true  => (6 - 7) > 0  => false
+j=5;  5 < 6  => true  => (4 - 7) > 0  => false
+j=6;  6 < 6  => false
+
+
+i=1;  1 < 6  => true
+
+j=2;  2 < 6  => true  => (5 - 1) > 0  => true  => maxProfit = 4
+j=3;  3 < 6  => true  => (3 - 1) > 4  => false
+j=4;  4 < 6  => true  => (6 - 1) > 4  => true  => maxProfit = 5
+j=5;  5 < 6  => true  => (4 - 1) > 5  => false
+j=6;  6 < 6  => false
+
+
+i=2;  2 < 6  => true
+
+j=3;  3 < 6  => true  => (3 - 5) > 5  => false
+j=4;  4 < 6  => true  => (6 - 5) > 5  => false
+j=5;  5 < 6  => true  => (4 - 5) > 5  => false
+j=6;  6 < 6  => false
+
+
+i=3;  3 < 6  => true
+
+j=4;  4 < 6  => true  => (6 - 3) > 5  => false
+j=5;  5 < 6  => true  => (4 - 3) > 5  => false
+j=6;  6 < 6  => false
+
+
+i=4;  4 < 6  => true
+
+j=5;  5 < 6  => true  => (4 - 6) > 5  => false
+j=6;  6 < 6  => false
+
+
+i=5;  5 < 6  => true
+
+j=6;  6 < 6  => false
+
+
+i=6;  6 < 6  => false
+
+
+Final: maxProfit = 5
