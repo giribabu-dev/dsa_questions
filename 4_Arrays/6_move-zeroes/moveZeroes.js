@@ -11,7 +11,6 @@ var moveZeroes = function (nums) {
     for (let j = x; j < nums.length; j++) {
         nums[j] = 0;
     }
-
     return nums;
 }
 
