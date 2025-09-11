@@ -4,3 +4,33 @@ Bubble Sort is a simple sorting algorithm that repeatedly steps through the list
 wrong order. This process is repeated until the array is sorted.
 After each pass, the largest unsorted element "bubbles up" to its correct position at the end of the array.
 It's called "Bubble Sort" because smaller elements slowly "bubble" to the top of the list.
+
+
+Approach:
+**********
+1. Iterate through the array multiple times.
+2. In each pass, compare adjacent elements:
+   a. If the current element is greater than the next one, swap them.
+   b. After each pass, the largest unsorted element bubbles up to its correct position at the end.
+3. Use a boolean flag (isSwapped) to track whether any swapping happened:
+   a. If no swaps occured in a full pass, the array is already sorted → early exit (optimization).
+4. Repeat this process for n-1 passes (where n is the array length), or until no swaps are needed.
+
+
+Time Complexity:
+*****************
+1. Best Case: O(n) → when array is already sorted (optimized with isSwapped)
+2. Worst Case: O(n^2) → when array is in reverse order
+
+
+Space Complexity:
+******************
+1. O(1) → In place sorting, no extra space used
+
+
+Dry Run:
+*********
+arr = [4, 5, 1, 3, 9]
+
+n = 5
+
