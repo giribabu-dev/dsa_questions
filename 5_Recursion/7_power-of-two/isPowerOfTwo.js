@@ -4,5 +4,5 @@ var isPowerOfTwo = function (n) {
     return isPowerOfTwo(n / 2);
 }
 
-console.log(isPowerOfTwo(8))
-console.log(isPowerOfTwo(18))
+console.log(isPowerOfTwo(8));  // true
+console.log(isPowerOfTwo(18));  // false
